@@ -1,0 +1,123 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.calculator {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0; /* Inicialmente establecer la opacidad a 0 */
+    transform: translateY(20px); /* Inicialmente desplazado hacia abajo */
+    animation: fadeInUp 1s ease-in-out forwards; /* Aplicar la animación */
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.calculator label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.calculator input {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff79;
+    color: #333;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#result {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 123, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#result.show {
+    opacity: 1;
+}
+
+.result-message,
+.final-grade {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 10px;
+    cursor: pointer;
+    padding: 5px 10px; /* Espacio interno horizontal aumentado */
+    border-radius: 10px; /* Borde con curvas suaves */
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
